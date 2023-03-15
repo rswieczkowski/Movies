@@ -28,13 +28,13 @@ class getDoctrine_FixturesLoadCommandService extends App_KernelDevDebugContainer
         include_once \dirname(__DIR__, 4).'/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/AbstractFixture.php';
         include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-fixtures-bundle/ORMFixtureInterface.php';
         include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-fixtures-bundle/Fixture.php';
-        include_once \dirname(__DIR__, 4).'/src/DataFixtures/AppFixtures.php';
+        include_once \dirname(__DIR__, 4) . '/src/DataFixtures/ActorFixtures.php';
         include_once \dirname(__DIR__, 4).'/src/DataFixtures/MovieFixtures.php';
         include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-fixtures-bundle/Purger/PurgerFactory.php';
         include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-fixtures-bundle/Purger/ORMPurgerFactory.php';
 
         $a = new \Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader($container);
-        $a->addFixtures([0 => ['fixture' => new \App\DataFixtures\AppFixtures(), 'groups' => []], 1 => ['fixture' => new \App\DataFixtures\MovieFixtures(), 'groups' => []]]);
+        $a->addFixtures([0 => ['fixture' => new \App\DataFixtures\ActorFixtures(), 'groups' => []], 1 => ['fixture' => new \App\DataFixtures\MovieFixtures(), 'groups' => []]]);
 
         $container->privates['doctrine.fixtures_load_command'] = $instance = new \Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand($a, ($container->services['doctrine'] ?? $container->getDoctrineService()), ['default' => new \Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory()]);
 
