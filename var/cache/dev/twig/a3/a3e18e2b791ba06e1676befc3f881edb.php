@@ -57,10 +57,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
         // line 6
         echo "
-    ";
-        // line 7
-        echo twig_escape_filter($this->env, (isset($context["author"]) || array_key_exists("author", $context) ? $context["author"] : (function () { throw new RuntimeError('Variable "author" does not exist.', 7, $this->source); })()), "html", null, true);
-        echo "
+ <h1>test message</h1>
 
 ";
         
@@ -80,7 +77,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
     public function getDebugInfo()
     {
-        return array (  62 => 7,  59 => 6,  52 => 5,  35 => 1,);
+        return array (  59 => 6,  52 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -91,7 +88,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
 {% block body %}
 
-    {{ author }}
+ <h1>test message</h1>
 
 {% endblock %}", "index.html.twig", "/home/dezoo/symfony_project/templates/index.html.twig");
     }
