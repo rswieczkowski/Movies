@@ -57,7 +57,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
         // line 6
         echo "
- <h1>test message</h1>
+<h1 class=\"bg-blue-500 text-2xl text-center font-bold\">Hello, World!</h1>
 
 ";
         
@@ -88,7 +88,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
 {% block body %}
 
- <h1>test message</h1>
+<h1 class=\"bg-blue-500 text-2xl text-center font-bold\">Hello, World!</h1>
 
 {% endblock %}", "index.html.twig", "/home/dezoo/symfony_project/templates/index.html.twig");
     }
