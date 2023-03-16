@@ -59,13 +59,13 @@ class __TwigTemplate_ff24a7456f28f5841cb1f8e04ea423c1 extends Template
         ";
         // line 12
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 16
         echo "    </head>
     <body>
         ";
-        // line 17
-        $this->displayBlock('body', $context, $blocks);
         // line 18
+        $this->displayBlock('body', $context, $blocks);
+        // line 19
         echo "    </body>
 </html>
 ";
@@ -115,13 +115,17 @@ class __TwigTemplate_ff24a7456f28f5841cb1f8e04ea423c1 extends Template
         echo "            ";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
+            ";
+        // line 14
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("method2");
+        echo "
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 17
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -140,7 +144,7 @@ class __TwigTemplate_ff24a7456f28f5841cb1f8e04ea423c1 extends Template
 
     public function getDebugInfo()
     {
-        return array (  125 => 17,  115 => 13,  108 => 12,  98 => 9,  91 => 8,  78 => 5,  69 => 18,  67 => 17,  63 => 15,  61 => 12,  58 => 11,  55 => 8,  50 => 5,  44 => 1,);
+        return array (  129 => 18,  120 => 14,  115 => 13,  108 => 12,  98 => 9,  91 => 8,  78 => 5,  69 => 19,  67 => 18,  63 => 16,  61 => 12,  58 => 11,  55 => 8,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -158,6 +162,7 @@ class __TwigTemplate_ff24a7456f28f5841cb1f8e04ea423c1 extends Template
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('method2') }}
         {% endblock %}
     </head>
     <body>
