@@ -9,3 +9,10 @@
 /var/git remote add origin git@github.com:rswieczkowski/Movies.git
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
