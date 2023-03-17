@@ -59,6 +59,10 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
         echo "
 <h1 class=\"bg-blue-500 text-2xl text-center font-bold\">Hello, World!</h1>
 
+    <img src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/img001.1745e7ac.jpg"), "html", null, true);
+        echo "\">
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -77,7 +81,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
     public function getDebugInfo()
     {
-        return array (  59 => 6,  52 => 5,  35 => 1,);
+        return array (  64 => 9,  59 => 6,  52 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -90,6 +94,7 @@ class __TwigTemplate_27b30d2c1647534ffcf851d87feb1254 extends Template
 
 <h1 class=\"bg-blue-500 text-2xl text-center font-bold\">Hello, World!</h1>
 
+    <img src=\"{{ asset('build/images/img001.1745e7ac.jpg') }}\">
 {% endblock %}", "index.html.twig", "/home/dezoo/symfony_project/templates/index.html.twig");
     }
 }
