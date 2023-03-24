@@ -91,6 +91,15 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["movie"]) || array_key_exists("movie", $context) ? $context["movie"] : (function () { throw new RuntimeError('Variable "movie" does not exist.', 28, $this->source); })()), "description", [], "any", false, false, false, 28), "html", null, true);
         echo "
         </p>
+
+        <a href=\"/movies/edit/";
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["movie"]) || array_key_exists("movie", $context) ? $context["movie"] : (function () { throw new RuntimeError('Variable "movie" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31), "html", null, true);
+        echo "\"
+           class=\"bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300\">
+
+            Edit Movie
+        </a>
     </div>
 ";
         
@@ -110,7 +119,7 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
 
     public function getDebugInfo()
     {
-        return array (  91 => 28,  82 => 22,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  97 => 31,  91 => 28,  82 => 22,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -144,6 +153,12 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
         <p class=\"text-xl py-6\">
             {{ movie.description }}
         </p>
+
+        <a href=\"/movies/edit/{{ movie.id }}\"
+           class=\"bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300\">
+
+            Edit Movie
+        </a>
     </div>
 {% endblock %}", "movies/show.html.twig", "/home/dezoo/symfony_project/templates/movies/show.html.twig");
     }
