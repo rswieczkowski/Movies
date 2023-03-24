@@ -65,27 +65,25 @@ class __TwigTemplate_654ae752b95558fbb66888327123f97d extends Template
     </div>
 
     <div class=\"w-4/5 m-auto pt-20\">
-        <form
-                action=\"/movies\"
-                method=\"POST\"
-                enctype=\"multipart/form-data\">
-            <input
-                    type=\"text\"
-                    name=\"title\"
-                    value=\"Review title\"
-                    class=\"bg-transparent block border-b-2 w-full h-20 text-6xl outline-none\">
+        ";
+        // line 13
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
+        echo "
+        ";
+        // line 14
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'widget');
+        echo "
+        <button
+                type=\"submit\"
+                class=\"uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl\">
+            Submit Review
+        </button>
+        ";
+        // line 20
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), 'form_end');
+        echo "
 
-            <textarea
-                    name=\"description\"
-                    placeholder=\"Review Description\"
-                    class=\"py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none\">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos veritatis, omnis dolores error ad molestias cum accusantium odit doloremque ratione illo architecto commodi placeat deleniti provident eveniet cupiditate eius at.</textarea>
 
-            <button
-                    type=\"submit\"
-                    class=\"uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl\">
-                Submit Review
-            </button>
-        </form>
     </div>
 ";
         
@@ -105,7 +103,7 @@ class __TwigTemplate_654ae752b95558fbb66888327123f97d extends Template
 
     public function getDebugInfo()
     {
-        return array (  59 => 4,  52 => 3,  35 => 1,);
+        return array (  83 => 20,  74 => 14,  70 => 13,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -122,27 +120,16 @@ class __TwigTemplate_654ae752b95558fbb66888327123f97d extends Template
     </div>
 
     <div class=\"w-4/5 m-auto pt-20\">
-        <form
-                action=\"/movies\"
-                method=\"POST\"
-                enctype=\"multipart/form-data\">
-            <input
-                    type=\"text\"
-                    name=\"title\"
-                    value=\"Review title\"
-                    class=\"bg-transparent block border-b-2 w-full h-20 text-6xl outline-none\">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button
+                type=\"submit\"
+                class=\"uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl\">
+            Submit Review
+        </button>
+        {{ form_end(form) }}
 
-            <textarea
-                    name=\"description\"
-                    placeholder=\"Review Description\"
-                    class=\"py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none\">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos veritatis, omnis dolores error ad molestias cum accusantium odit doloremque ratione illo architecto commodi placeat deleniti provident eveniet cupiditate eius at.</textarea>
 
-            <button
-                    type=\"submit\"
-                    class=\"uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl\">
-                Submit Review
-            </button>
-        </form>
     </div>
 {% endblock %}", "movies/edit.html.twig", "/home/dezoo/symfony_project/templates/movies/edit.html.twig");
     }
