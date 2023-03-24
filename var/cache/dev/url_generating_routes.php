@@ -7,5 +7,6 @@ return [
     'movies' => [[], ['_controller' => 'App\\Controller\\MoviesController::index'], [], [['text', '/movies']], [], [], []],
     'create_movie' => [[], ['_controller' => 'App\\Controller\\MoviesController::create'], [], [['text', '/movies/create']], [], [], []],
     'edit_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies/edit']], [], [], []],
-    'movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies']], [], [], []],
+    'delete_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies']], [], [], []],
+    'show_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies']], [], [], []],
 ];

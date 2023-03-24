@@ -8,7 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/movies' => [[['_route' => 'movies', '_controller' => 'App\\Controller\\MoviesController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/movies' => [[['_route' => 'movies', '_controller' => 'App\\Controller\\MoviesController::index'], null, null, null, false, false, null]],
         '/movies/create' => [[['_route' => 'create_movie', '_controller' => 'App\\Controller\\MoviesController::create'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -16,15 +16,17 @@ return [
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
                 .'|/movies/(?'
                     .'|edit/([^/]++)(*:66)'
-                    .'|([^/]++)(*:81)'
+                    .'|delete/([^/]++)(*:88)'
+                    .'|([^/]++)(*:103)'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         66 => [[['_route' => 'edit_movie', '_controller' => 'App\\Controller\\MoviesController::edit'], ['id'], null, null, false, true, null]],
-        81 => [
-            [['_route' => 'movie', '_controller' => 'App\\Controller\\MoviesController::show'], ['id'], ['GET' => 0], null, false, true, null],
+        88 => [[['_route' => 'delete_movie', '_controller' => 'App\\Controller\\MoviesController::delete'], ['id'], ['GET' => 0, 'DELETE' => 1], null, false, true, null]],
+        103 => [
+            [['_route' => 'show_movie', '_controller' => 'App\\Controller\\MoviesController::show'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
