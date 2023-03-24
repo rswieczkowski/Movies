@@ -100,6 +100,15 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
 
             Edit Movie
         </a>
+
+        <a href=\"/movies/delete/";
+        // line 37
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["movie"]) || array_key_exists("movie", $context) ? $context["movie"] : (function () { throw new RuntimeError('Variable "movie" does not exist.', 37, $this->source); })()), "id", [], "any", false, false, false, 37), "html", null, true);
+        echo "\"
+           class=\"bg-red-500 font-bold py-2 px-4 ml-6 rounded transition-all hover:bg-green-300\">
+
+            Delete Movie
+        </a>
     </div>
 ";
         
@@ -119,7 +128,7 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
 
     public function getDebugInfo()
     {
-        return array (  97 => 31,  91 => 28,  82 => 22,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  106 => 37,  97 => 31,  91 => 28,  82 => 22,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -158,6 +167,12 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
            class=\"bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300\">
 
             Edit Movie
+        </a>
+
+        <a href=\"/movies/delete/{{ movie.id }}\"
+           class=\"bg-red-500 font-bold py-2 px-4 ml-6 rounded transition-all hover:bg-green-300\">
+
+            Delete Movie
         </a>
     </div>
 {% endblock %}", "movies/show.html.twig", "/home/dezoo/symfony_project/templates/movies/show.html.twig");
