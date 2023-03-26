@@ -66,7 +66,7 @@ class __TwigTemplate_308949072ea9ecd77cf0f87d9f50b07a extends Template
             </h1>
 
             <span class=\"font-light text-gray-500 italic\">
-                Created by Code With Dary
+         
             </span>
         </div>
     </div>
@@ -163,7 +163,7 @@ class __TwigTemplate_308949072ea9ecd77cf0f87d9f50b07a extends Template
             </h1>
 
             <span class=\"font-light text-gray-500 italic\">
-                Created by Code With Dary
+         
             </span>
         </div>
     </div>

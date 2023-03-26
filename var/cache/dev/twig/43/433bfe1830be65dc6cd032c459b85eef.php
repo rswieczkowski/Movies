@@ -67,11 +67,11 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
         <div class=\"py-10 text-center\">
             <div class=\"inline-block sm:pt-1\">
                 <h2 class=\"font-bold\">
-                    Created by: Code With Dary
+
                 </h2>
 
                 <p class=\"text-sm text-gray-600\">
-                    28-01-2022 4 min. read
+              
                 </p>
             </div>
         </div>
@@ -144,11 +144,11 @@ class __TwigTemplate_4736f240e8896dd8d13b2d3cc99ae792 extends Template
         <div class=\"py-10 text-center\">
             <div class=\"inline-block sm:pt-1\">
                 <h2 class=\"font-bold\">
-                    Created by: Code With Dary
+
                 </h2>
 
                 <p class=\"text-sm text-gray-600\">
-                    28-01-2022 4 min. read
+              
                 </p>
             </div>
         </div>
