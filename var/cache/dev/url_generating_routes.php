@@ -9,4 +9,7 @@ return [
     'edit_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies/edit']], [], [], []],
     'delete_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies/delete']], [], [], []],
     'show_movie' => [['id'], ['_controller' => 'App\\Controller\\MoviesController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/movies']], [], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
 ];
