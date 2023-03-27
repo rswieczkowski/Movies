@@ -70,27 +70,36 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
             </span>
         </div>
     </div>
+    ";
+        // line 15
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15)) {
+            // line 16
+            echo "
+        <div class=\"mx-auto w-4/5 my-8\">
+            <a
+                    href=\"/movies/create\"
+                    class=\"uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800\">
+                Create New movie
+            </a>
+        </div>
 
-    <div class=\"mx-auto w-4/5 my-8\">
-        <a
-                href=\"/movies/create\"
-                class=\"uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800\">
-            Create New movie
-        </a>
-    </div>
+    ";
+        }
+        // line 26
+        echo "
     <div class=\"md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 \">
         <!-- Review Item -->
         ";
-        // line 25
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) || array_key_exists("movies", $context) ? $context["movies"] : (function () { throw new RuntimeError('Variable "movies" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) || array_key_exists("movies", $context) ? $context["movies"] : (function () { throw new RuntimeError('Variable "movies" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 26
+            // line 30
             echo "            <div class=\"text-center pt-8 pb-4\">
                 <img
                         src=\"";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "imagePath", [], "any", false, false, false, 28), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "imagePath", [], "any", false, false, false, 32), "html", null, true);
             echo "\"
                         alt=\"\"
                         class=\"shadow-xl rounded-md\"
@@ -98,8 +107,8 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
 
                 <h2 class=\"text-gray-700 font-bold text-3xl py-2\">
                     ";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "title", [], "any", false, false, false, 34), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "title", [], "any", false, false, false, 38), "html", null, true);
             echo "
                 </h2>
 
@@ -110,14 +119,14 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
 
                 <p class=\"text-base text-gray-700 pt-4 pb-10 leading-8 font-light\">
                     ";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "description", [], "any", false, false, false, 43), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "description", [], "any", false, false, false, 47), "html", null, true);
             echo "
                 </p>
 
                 <a href=\"/movies/";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "id", [], "any", false, false, false, 46), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["movie"], "id", [], "any", false, false, false, 50), "html", null, true);
             echo "\"
                    class=\"uppercase border border-gray-500 text-gray-600 text-lg py-4 px-12 rounded transition transition-all hover:bg-gray-800 hover:text-white\">
                     Keep Reading
@@ -128,7 +137,7 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 56
         echo "    </div>
 ";
         
@@ -148,7 +157,7 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
 
     public function getDebugInfo()
     {
-        return array (  132 => 52,  120 => 46,  114 => 43,  102 => 34,  93 => 28,  89 => 26,  85 => 25,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  141 => 56,  129 => 50,  123 => 47,  111 => 38,  102 => 32,  98 => 30,  94 => 29,  89 => 26,  77 => 16,  75 => 15,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -167,14 +176,18 @@ class __TwigTemplate_8318ca8972d1ec64e22f3d975f8b07af extends Template
             </span>
         </div>
     </div>
+    {% if app.user %}
 
-    <div class=\"mx-auto w-4/5 my-8\">
-        <a
-                href=\"/movies/create\"
-                class=\"uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800\">
-            Create New movie
-        </a>
-    </div>
+        <div class=\"mx-auto w-4/5 my-8\">
+            <a
+                    href=\"/movies/create\"
+                    class=\"uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800\">
+                Create New movie
+            </a>
+        </div>
+
+    {% endif %}
+
     <div class=\"md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 \">
         <!-- Review Item -->
         {% for movie in movies %}

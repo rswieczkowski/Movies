@@ -3535,7 +3535,22 @@
         </service>
       </argument>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.cjc6paG"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.FsQ6U.P"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -4046,6 +4061,22 @@
       <argument type="collection">
         <argument key="security.firewall.map.context.dev" type="service_closure" id="security.firewall.map.context.dev"/>
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.s4hAtZ3" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/movies/create</argument>
+    </service>
+    <service id=".security.request_matcher.cjc6paG" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.s4hAtZ3"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.92MUXM4" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/profile</argument>
+    </service>
+    <service id=".security.request_matcher.FsQ6U.P" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.92MUXM4"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
